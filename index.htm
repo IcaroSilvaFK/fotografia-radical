@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Fotografia Radical</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__main">
+      <h1>Fotografia Rafical</h1>
+      <button id="login_button">Login</button>
+    </div>
+  </header>
+  <section class="firstSection">
+    <span>Menu</span>
+  </section>
+  <main>
+    <section class="sectionImage">
+      <div>
+        <div class="card">
+          <img src="./assets/Foto01.png" alt="Imagem de alguém surfando uma onda">
+          <div>
+            <button class="liked">
+              <img src="./assets/heart.png" alt="">
+              25
+            </button>
+            <button>
+              <img src="./assets/comment.png" alt="">
+              10
+            </button>
+          </div>
+        </div>
+        <div class="image__footer">
+          <div class="card">
+            <img src="./assets/Foto03.png" alt="Imagem de alguém surfando uma onda grande">
+            <div>
+              <button class="liked">
+                <img src="./assets/heart.png" alt="">
+                23
+              </button>
+              <button>
+                <img src="./assets/comment.png" alt="">
+                15
+              </button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/Foto04.png" alt="Imagem do sol no mar">
+            <div>
+              <button class="liked">
+                <img src="./assets/heart.png" alt="">
+                12
+              </button>
+              <button>
+                <img src="./assets/comment.png" alt="">
+                8
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./assets/Foto02.png" alt="Imagem de pessoas surfando">
+        <div>
+          <button class="liked">
+            <img src="./assets/heart-white.png" alt="">
+            12
+          </button>
+          <button>
+            <img src="./assets/comment.png" alt="">
+            15
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="sectionImage">
+      <div class="card">
+        <img src="./assets/Foto05.png" alt="Imagem de pessoas surfando">
+        <div>
+          <button class="liked">
+            <img src="./assets/heart.png" alt="">
+            12
+          </button>
+          <button>
+            <img src="./assets/comment.png" alt="">
+            8
+          </button>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <img src="./assets/Foto06.png" alt="Imagem de alguém surfando uma onda">
+          <div>
+            <button class="liked">
+              <img src="./assets/heart-white.png" alt="">
+              12
+            </button>
+            <button>
+              <img src="./assets/comment.png" alt="">
+              8
+            </button>
+          </div>
+        </div>
+        <div class="image__footer">
+          <div class="card">
+            <img src="./assets/Foto07.png" alt="Imagem de alguém surfando uma onda grande">
+            <div>
+              <button class="liked">
+                <img src="./assets/heart.png" alt="">
+                12
+              </button>
+              <button>
+                <img src="./assets/comment.png" alt="">
+                8
+              </button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/Foto08.png" alt="Imagem do sol no mar">
+            <div>
+              <button class="liked">
+                <img src="./assets/heart-white.png" alt="">
+                12
+              </button>
+              <button>
+                <img src="./assets/comment.png" alt="">
+                8
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div>
+      <h2>
+        Fotografia <br /> Radical
+      </h2>
+
+      <nav>
+        <ul>
+          <li>
+            <img src="./assets/youtube.png" />
+          </li>
+          <li>
+            <img src="./assets/twitter.png" />
+          </li>
+          <li>
+            <img src="./assets/tiktok.png" />
+          </li>
+          <li>
+            <img src="./assets/instagram.png" />
+          </li>
+        </ul>
+      </nav>
+      <span>
+        Copyright - 2022
+      </span>
+    </div>
+  </footer>
+  <div class="modal hidden">
+    <div class="modal__body">
+      <button title="Fechar modal" id="closeModal">
+        <img src="./assets/close.png" />
+      </button>
+      <header class="body__header">
+        <span>Login</span>
+      </header>
+      <form action="">
+        <div class="col">
+          <label for="email">E-mail</label>
+          <input type="text" placeholder="Digite seu E-mail" id="email">
+        </div>
+        <div class="col">
+          <label for="password">Senha</label>
+          <input type="text" placeholder="Digite sua senha" id="password">
+        </div>
+        <div class="form__footer">
+          <button class="outline">
+            Cancelar
+          </button>
+          <button>
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+      const $loginButton = document.querySelector("#login_button")
+      const $closeModalButton = document.querySelector("#closeModal")
+
+      $loginButton.addEventListener('click', () => {
+        const $modal = document.querySelector('.modal');
+         $modal.classList.remove('hidden')
+      })
+      $closeModalButton.addEventListener('click', () =>{
+        const $modal = document.querySelector('.modal');
+         $modal.classList.add('hidden')
+      })
+
+
+  </script>
+</body>
+
+</html>
